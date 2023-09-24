@@ -1,0 +1,42 @@
+.block-sidebar{
+    
+    padding: 1.5rem;
+    padding-bottom: 1rem;
+    padding-top: 1.5rem;
+    border-bottom: 1px solid rgb(220, 219, 219);
+}
+.block-sidebar h3{
+    font-size: 1.55rem;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    color: var(--color-sidebar-text);
+
+}
+.list-category{
+    padding: 0;
+    margin: 0;
+}
+.list-category li{
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 1.5rem 0;
+    cursor: pointer;
+}
+.service .list-category li{
+    display: flex;
+    align-items: center;
+}
+.service .list-category li input{
+    margin-right: 0.4rem;
+}
+.price .list-category{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.price .list-category li{
+    background-color: rgb(238, 238, 238);
+    border-radius: 2rem;
+    padding: 0.6rem 1.5rem;
+    margin: 0.3rem 0;
+}
