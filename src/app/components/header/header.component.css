@@ -58,7 +58,7 @@
 .key-word span{
     margin-right: 1.5rem;
     font-size: 1.5rem;
-    color: rgb(128, 128, 137);
+    color: var(--regular-color-text);
 }
 .headerRight{
     margin-left: 3rem;
@@ -79,7 +79,7 @@
 .headerNavigationItemName{
     margin-left: 0.5rem;
     font-size: 1.45rem;
-    color: rgb(128, 128, 137);
+    color: var(--regular-color-text);
 }
 .divider{
     height: 60%;
@@ -108,4 +108,19 @@
     background-color: red;
     border-radius: 50%;
     color: var(--main-color);
+}
+.location-ship{
+    margin-left: 3rem;
+}
+.location-ship img{
+    margin-right: 0.3rem;
+}
+.ship-to{
+    color: var(--regular-color-text);
+}
+.location{
+    color: black;
+    text-decoration: underline;
+    font-size: 1.5rem;
+    margin-left: 0.3rem;
 }

@@ -1,0 +1,17 @@
+.bread-crumb{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: var(--regular-color-text);
+    font-weight:300;
+}
+.home{
+    gap: 1rem;
+}
+.sidebar{
+    flex: 2;
+    background-color: var(--main-color);
+}
+.home-product{
+    flex: 10;
+    background-color: var(--main-color);
+}
