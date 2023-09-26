@@ -9,6 +9,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/product/product.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { ImageSliderComponent } from './components/image-slider/image-slider.component';
+import { NextButtonDirective } from './next-button.directive';
+import { PrevButtonDirective } from './prev-button.directive';
+import { SharedDataServiceService } from './services/shared-data-service.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,16 @@ import { FooterComponent } from './components/footer/footer.component';
     HomeComponent,
     ProductComponent,
     ProductDetailComponent,
-    FooterComponent
+    FooterComponent,
+    ImageSliderComponent,
+    NextButtonDirective,
+    PrevButtonDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [SharedDataServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

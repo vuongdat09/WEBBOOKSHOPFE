@@ -2,11 +2,15 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+
 }
 :root{
     --main-color : #ffffff;
-    --padding-website : 2%;
+    --padding-website : 1.5%;
     --text-color : rgb(10, 104, 255);
+    --regular-color-text:rgb(128, 128, 137);
+    --color-sidebar-text : rgb(56, 56, 61);
 }
 html{
     font-size: 62.5%;
