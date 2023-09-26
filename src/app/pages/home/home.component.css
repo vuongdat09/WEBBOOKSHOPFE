@@ -12,6 +12,19 @@
     background-color: var(--main-color);
 }
 .home-product{
-    flex: 10;
+    flex: 9.8;
     background-color: var(--main-color);
+    padding: 1rem 1.5rem;
+    box-sizing: border-box;
+}
+.title-product{
+    font-size: 2.1rem;
+    color: var( --color-sidebar-text);
+    font-weight: 400;
+}
+.contain-slider{
+    width: 100%;
+    margin-top: 1rem;
+    display: block;
+    height: 500px;
 }
