@@ -1,0 +1,29 @@
+<button [routerLink]="['/admin/addProducts']">thêm sản phẩm</button>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Category</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="products && products.length" >
+        <tr *ngFor="let product of products ; index as i">
+            <td>{{i}}</td>
+            <td>{{product.name}}</td>
+            <td><img src="{{product.image}}" alt="ảnh sản pẩm" style="width: 50px; height: 50px;"></td>
+            <td>{{product.price}}</td>
+            <td class="description">{{product.desc}}</td>
+            <td>{{product.quantity}}</td>
+            <td>{{product.categoryId?.name}}</td>
+            <td>
+                <button (click)="removeProducts(product._id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
