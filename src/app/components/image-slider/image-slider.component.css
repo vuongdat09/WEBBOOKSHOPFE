@@ -114,9 +114,11 @@
 .arrow-left{
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%) rotate(180deg);
     left: 0;
     
+    display: flex;
+    opacity: 0.4;
 }
 .arrow-right{
     position: absolute;
@@ -128,6 +130,11 @@
     cursor: pointer;
 }
 .arrow-right img{
+    width: 30px;
+    object-fit: cover;
+
+}
+.arrow-left img{
     width: 30px;
     object-fit: cover;
 
