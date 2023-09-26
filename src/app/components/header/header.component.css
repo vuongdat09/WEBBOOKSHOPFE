@@ -89,11 +89,12 @@
 .card-wrapper{
     padding:0.7rem 1rem;
     position: relative;
+    border-radius: 4px;
 
 }
 .card-wrapper:hover{
     cursor: pointer;
-    background-color: rgb(108, 164, 243);
+    background-color: rgb(217, 231, 250);
 }
 .card-counter{
     position: absolute;
