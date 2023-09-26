@@ -1,1 +1,54 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --main-color : #ffffff;
+    --padding-website : 1.5%;
+    --text-color : rgb(10, 104, 255);
+    --regular-color-text:rgb(128, 128, 137);
+    --color-sidebar-text : rgb(56, 56, 61);
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    background-color: #f5f5fa;
+    font-family: 'Roboto', sans-serif;
+
+}
+li{
+    list-style: none;
+
+}
+a{
+    text-decoration: none;
+}
+input{
+    outline: none;
+}
+.d-flex{
+    display: flex;
+}
+.al-c{
+    align-items: center;
+}
+.jf-c{
+    justify-content: center;
+}
+.jf-b{
+    justify-content: space-between;
+}
+.d-grid{
+    display: grid;
+}
+.fd{
+    flex-direction: column;
+}
+.wrapper{
+    padding: 0 var(--padding-website);
+    width: 100%;
+}

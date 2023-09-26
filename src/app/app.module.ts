@@ -31,8 +31,7 @@ import { SignupComponent } from './components/auth/signup/signup.component';
     DasboarComponent,
     NavComponent,
     SigninComponent,
-    SignupComponent
-  ],
+    SignupComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
