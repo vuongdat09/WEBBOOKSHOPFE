@@ -8,7 +8,6 @@ import { ShareDataService } from '../services/share-data.service';
 export class PrevButtonDirective {
 
   constructor(private el:ElementRef,private sharedData : ShareDataService) { 
-    console.log(this.el.nativeElement)
   }
   @HostListener('click')
   btnPrev(){
@@ -19,7 +18,7 @@ export class PrevButtonDirective {
     if(this.sharedData.currentIndex < 0){
       this.sharedData.currentIndex = (childrenTrackList.length - 2)/2
     }
-    slideTrack.style.transform= `translateX(-${this.sharedData.currentIndex * 102}%)`
+    slideTrack.style.transform= `translateX(-${this.sharedData.currentIndex * 102.3}%)`
    
    
   }

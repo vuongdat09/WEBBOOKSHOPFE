@@ -5,5 +5,11 @@ import { Injectable } from '@angular/core';
 })
 export class ShareDataService {
   currentIndex = 0;
-  constructor() { }
+  constructor() { 
+    
+  }
+  setCurrentSlideIndex(index: number) {
+    this.currentIndex = index;
+  }
+  
 }

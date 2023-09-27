@@ -7,11 +7,11 @@ import { CreateProductComponent } from './components/admin/create-product/create
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LayoutWebsiteComponent } from './shared/layout-website/layout-website.component';
-import { HomeComponent } from './pages/home/home.component';
+import { HomePageComponent } from './components/page/home-page/home-page.component';
 
 const routes: Routes = [
   {path: '', component: LayoutWebsiteComponent,children:[
-    {path: '', component: HomeComponent},
+    {path: '', component: HomePageComponent},
     {path: 'signin', component: SigninComponent},
     {path: 'signup', component: SignupComponent},
   ]},
