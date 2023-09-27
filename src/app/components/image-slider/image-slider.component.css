@@ -2,10 +2,9 @@
     width: 983px;    
     min-width: 800px;
     position: relative;
-    overflow: hidden;
-    align-items: flex-start;
-    height: 16.5rem;
-    background-color: rgb(156, 164, 168,0.2);
+    overflow: hidden;    
+    height: 20.6rem;
+    
 }
 .slide-track{
     
@@ -16,7 +15,7 @@
     transition: all 0.5s ease-in-out;
     transform: translateX(-0%);
    
-    gap: 20px;
+    
     transform: translateX(0%);
     
 }
@@ -28,7 +27,7 @@
     width:49%;
     overflow: hidden;
     border-radius: 0.4rem;
-    border: 1px solid rgba(0, 0, 0, 0.05)
+    border: 1px solid rgba(0, 0, 0, 0.15)
     
 }
 .imgBook{
@@ -90,22 +89,22 @@
     transform: translateX(0);
 }
 .slick-slide:nth-child(2){
-    transform: translateX(104%);
+    transform: translateX(103.4%);
 }
 .slick-slide:nth-child(3){
-    transform: translateX(208%);
+    transform: translateX(208.2%);
 }
 .slick-slide:nth-child(4){
-    transform: translateX(312%);
+    transform: translateX(311.6%);
 }
 .slick-slide:nth-child(5){
-    transform: translateX(416%);
+    transform: translateX(416.5%);
 }
 .slick-slide:nth-child(6){
-    transform: translateX(520%);
+    transform: translateX(519.7%);
 }
 .slick-slide:nth-child(7){
-    transform: translateX(624%);
+    transform: translateX(624.5%);
 }
 .slick-slide:nth-child(8){
     transform: translateX(728%);
@@ -113,7 +112,7 @@
 
 .arrow-left{
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%) rotate(180deg);
     left: 0;
     
@@ -122,7 +121,7 @@
 }
 .arrow-right{
     position: absolute;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
     right: 0;
     height: 40px;
@@ -179,4 +178,28 @@
     font-size: 1.2rem;
     color: var(--main-color);
     padding: 0.2rem;
+}
+.slide-dots{
+    width: 90px;
+    transform: translateX(-50%);
+    height: 30px;
+    position: absolute;
+    bottom: 2.5%;
+    left: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    margin-top: 10%;
+}
+.dot{
+    width: 15px;
+    cursor: pointer;
+    height: 2px ;
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+.active{
+    background-color: var(--text-color);
+    transform: scaleX(1.5);
+    transition: all 0.3s ease-in-out;
 }

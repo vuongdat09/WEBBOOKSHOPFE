@@ -1,5 +1,5 @@
 
-<div class="carousel-container">
+<div class="carousel-container d-flex">
     
     <div class="slide-list">
         <div class="slide-track d-flex">
@@ -216,12 +216,20 @@
             
         </div>
     </div>
-    <div appNextButton class="arrow-right">
+    <div appNextButton (click)="nextCurrentDot()" class="arrow-right">
         <img src="https://salt.tikicdn.com/ts/upload/6b/59/c2/b61db5f1c32cfdc6d75e59d4fac2dbe8.png" alt="">
     </div>
-    <div  class="arrow-left" appPrevButton>
+    <div  class="arrow-left"  appPrevButton  (click)="prevCurrentDot()">
         <img src="https://salt.tikicdn.com/ts/upload/6b/59/c2/b61db5f1c32cfdc6d75e59d4fac2dbe8.png" alt="">
     </div>
-    <div></div>
+    <div class="slide-dots" appChooseDot >
+        <div 
+            class="dot" 
+            *ngFor="let dot of dots; let i = index"
+            [ngClass]="{'active': this.currentDot === i}"
+            (click)="setCurrentDot(i)"
+        ></div>
+       
+    </div>
    
 </div>

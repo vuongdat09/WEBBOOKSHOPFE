@@ -25,6 +25,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NextButtonDirective } from './directive/next-button.directive';
 import { PrevButtonDirective } from './directive/prev-button.directive';
+import { ChooseDotDirective } from './directive/choose-dot.directive';
+import { EllipsisDirective } from './directive/ellipsis.directive';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { PrevButtonDirective } from './directive/prev-button.directive';
     FooterComponent,
     NextButtonDirective,
     PrevButtonDirective,
+    ChooseDotDirective,
+    EllipsisDirective,
     ],
   imports: [
     BrowserModule,
