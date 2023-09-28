@@ -27,6 +27,7 @@ import { NextButtonDirective } from './directive/next-button.directive';
 import { PrevButtonDirective } from './directive/prev-button.directive';
 import { ChooseDotDirective } from './directive/choose-dot.directive';
 import { EllipsisDirective } from './directive/ellipsis.directive';
+import { ProductDetailComponent } from './components/page/product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { EllipsisDirective } from './directive/ellipsis.directive';
     PrevButtonDirective,
     ChooseDotDirective,
     EllipsisDirective,
+    ProductDetailComponent,
     ],
   imports: [
     BrowserModule,
