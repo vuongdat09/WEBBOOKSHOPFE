@@ -1,1 +1,11 @@
-<p>create-product works!</p>
+<form [formGroup]="products">
+    <input type="text" name="name" formControlName="name">
+    <input type="text" name="image" formControlName="image">
+    <input type="text" name="price" formControlName="price">
+    <input type="text" name="desc" formControlName="desc">
+    <input type="text" name="quantity" formControlName="quantity">
+    <select name="categoryId" id="" formControlName="categoryId">
+        <option *ngFor="let category of categories" value="category">{{category}}</option>
+    </select>
+    <button type="submit">add</button>
+</form>

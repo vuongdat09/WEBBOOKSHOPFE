@@ -14,13 +14,13 @@ export class ProductsService {
     return this.http.get<any[]>(`${this.URL}`);
   }
   getIdProducts(id:string|number): Observable<any> {
-    return this.http.get<any>(`${this.URL}/:${id}`);
+    return this.http.get<any>(`${this.URL}/${id}`);
   }
   removeProducts(id:string|number): Observable<any> {
-    return this.http.delete<any>(`${this.URL}/:${id}`);
+    return this.http.delete<any>(`${this.URL}/${id}`);
   }
   updateProducts(id:string|number , product:any): Observable<any> {
-    return this.http.put<any>(`${this.URL}/:${id}`,product);
+    return this.http.put<any>(`${this.URL}/${id}`,product);
   }
   postProducts(product:any): Observable<any> {
     return this.http.post<any>(`${this.URL}`,product);

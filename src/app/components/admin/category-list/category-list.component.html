@@ -1,0 +1,21 @@
+<button [routerLink]="['/admin/category/add']">thêm sản phẩm</button>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody *ngIf="categories && categories.length" >
+        <tr *ngFor="let category of categories ; index as i">
+            <td>{{i+1}}</td>
+            <td>{{category.name}}</td>
+            <td class="action">
+                <a href="/admin/category/{{category._id}}">
+                   <button  >update</button> 
+                </a>
+            </td>
+        </tr>
+    </tbody>
+</table>

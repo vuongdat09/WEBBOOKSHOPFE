@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +19,8 @@ import { DasboarComponent } from './components/admin/dasboar/dasboar.component';
 import { NavComponent } from './shared/layout-admin/nav/nav.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { CategoryListComponent } from './components/admin/category-list/category-list.component';
+import { CategoryCreateComponent } from './components/admin/category-create/category-create.component';
 
 @NgModule({
   declarations: [
@@ -31,14 +34,17 @@ import { SignupComponent } from './components/auth/signup/signup.component';
     DasboarComponent,
     NavComponent,
     SigninComponent,
-    SignupComponent],
+    SignupComponent,
+    CategoryListComponent,
+    CategoryCreateComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
     FormsModule,
-    RouterLink 
+    RouterLink ,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

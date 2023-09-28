@@ -1,0 +1,5 @@
+<p>category-create works!</p>
+<form (ngSubmit)="postCategory()">
+    <input type="text" name="name" [(ngModel)]="category.name" required>
+    <button type="submit">add</button>
+</form>

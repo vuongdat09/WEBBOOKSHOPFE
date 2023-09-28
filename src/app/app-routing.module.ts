@@ -6,8 +6,11 @@ import { ProductListComponent } from './components/admin/product-list/product-li
 import { NavComponent } from './shared/layout-admin/nav/nav.component';
 import { DasboarComponent } from './components/admin/dasboar/dasboar.component';
 import { CreateProductComponent } from './components/admin/create-product/create-product.component';
+import { UpdateProductComponent } from './components/admin/update-product/update-product.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
+import { CategoryListComponent } from './components/admin/category-list/category-list.component';
+import { CategoryCreateComponent } from './components/admin/category-create/category-create.component';
 
 const routes: Routes = [
   {path: '', component: HeaderComponent,children:[
@@ -18,7 +21,10 @@ const routes: Routes = [
   {path :'admin', component:NavComponent,children:[
     {path: '', component:DasboarComponent},
     {path: 'products', component: ProductListComponent},
-    {path: 'addProducts', component: CreateProductComponent}
+    {path: 'addProducts', component: CreateProductComponent},
+    {path: 'products/:id', component: UpdateProductComponent},
+    {path: 'category', component: CategoryListComponent},
+    {path: 'category/add', component: CategoryCreateComponent},
   ]}
 ];
 

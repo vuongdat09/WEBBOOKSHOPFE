@@ -14,14 +14,19 @@
     </thead>
     <tbody *ngIf="products && products.length" >
         <tr *ngFor="let product of products ; index as i">
-            <td>{{i}}</td>
+            <td>{{i+1}}</td>
             <td>{{product.name}}</td>
             <td><img src="{{product.image}}" alt="ảnh sản pẩm" style="width: 50px; height: 50px;"></td>
             <td>{{product.price}}</td>
             <td class="description">{{product.desc}}</td>
             <td>{{product.quantity}}</td>
             <td>{{product.categoryId?.name}}</td>
-            <td>
+            <td class="action">
+                <a href="/admin/products/{{product._id}}">
+                   <button  >update</button> 
+                </a>
+                
+
                 <button (click)="removeProducts(product._id)">Delete</button>
             </td>
         </tr>
