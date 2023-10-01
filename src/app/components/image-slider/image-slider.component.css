@@ -32,7 +32,7 @@
 }
 .imgBook{
     width: 16.5rem;
-    height: 16.5rem;
+    height: auto;
     position: relative;
     overflow: hidden;
 }
@@ -89,25 +89,25 @@
     transform: translateX(0);
 }
 .slick-slide:nth-child(2){
-    transform: translateX(103.4%);
+    transform: translateX(103.9%);
 }
 .slick-slide:nth-child(3){
-    transform: translateX(208.2%);
+    transform: translateX(208.8%);
 }
 .slick-slide:nth-child(4){
-    transform: translateX(311.6%);
+    transform: translateX(312.70%);
 }
 .slick-slide:nth-child(5){
-    transform: translateX(416.5%);
+    transform: translateX(417.5%);
 }
 .slick-slide:nth-child(6){
-    transform: translateX(519.7%);
+    transform: translateX(521.7%);
 }
 .slick-slide:nth-child(7){
-    transform: translateX(624.5%);
+    transform: translateX(626.4%);
 }
 .slick-slide:nth-child(8){
-    transform: translateX(728%);
+    transform: translateX(730.4%);
 }
 
 .arrow-left{

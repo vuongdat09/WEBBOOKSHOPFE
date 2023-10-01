@@ -1,0 +1,102 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Sách Hiểu Về Trái Tim (Tái Bản 2019) - Minh Niệm",
+      "price": 120,
+      "author": "Minh Niệm",
+      "sale": "31",
+      "img": "https://salt.tikicdn.com/cache/280x280/media/catalog/producttmp/1b/d0/54/d9b746933e8dc26b678f19e2dad6aebe.jpg.webp",
+      "desc": "Good"
+    },
+    {
+      "id": 2,
+      "name": "NGƯỜI THẦY – Nguyễn Chí Vịnh (bìa mềm)",
+      "price": 120,
+      "author": "Nguyễn Chí Vịnh",
+      "sale": "39",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/c0/d6/21/59385695aa6f6581397ffad1cc62fe25.jpeg.webp",
+      "desc": "Good"
+    },
+    {
+      "id": 3,
+      "price": 120,
+      "name": "Không Diệt Không Sinh Đừng Sợ Hãi (TB5)",
+      "author": "Thích Nhất Hạnh",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/a0/bf/43/267e59580ba829ef33eb1999199dafd5.jpg.webp",
+      "sale": 20,
+      "maxLength": 30
+    },
+    {
+      "id": 4,
+      "price": 120,
+      "name": "Storytelling With Data - Kể Chuyện Thông Qua Dữ Liệu (Cuốn Cẩm Nang Hướng Dẫn Trực Quan Hóa Dữ Liệu)",
+      "author": "Thích Nhất Hạnh",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/b6/0d/3b/305afbf42b8effda0a194b6f690cc2f1.jpg.webp",
+      "sale": 36,
+      "maxLength": 30
+    },
+    {
+      "id": 5,
+      "price": 100,
+      "name": "Nghệ Thuật Tư Duy Chiến Lược",
+      "author": "Thích Nhất Hạnh",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/14/05/da/54aced5d327d1c580719d26216757aa4.jpg.webp",
+      "sale": 26,
+      "maxLength": 30
+    },
+    {
+      "id": 6,
+      "price": 210,
+      "name": "Sách Tài Chính Cá Nhân Cho Người Việt Nam - Tặng Khóa học Online về Tài chính",
+      "author": "Lâm Minh Chánh",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/aa/77/eb/711f54ce041acff46f561bac347f45c8.png.webp",
+      "sale": 36,
+      "maxLength": 30
+    },
+    {
+      "id": 7,
+      "price": 150,
+      "name": "Cây Cam Ngọt Của Tôi",
+      "author": "José Mauro de Vasconcelos",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/5e/18/24/2a6154ba08df6ce6161c13f4303fa19e.jpg.webp",
+      "sale": 16,
+      "maxLength": 30
+    },
+    {
+      "id": 8,
+      "price": 200,
+      "name": "Muôn Kiếp Nhân Sinh 3 (Bìa Mềm)",
+      "author": "Nguyên Phong",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/fc/d8/20/f5ca747e4a2ffcb4a1f65fc9faba2cb7.jpg.webp",
+      "sale": 25,
+      "maxLength": 30
+    },
+    {
+      "id": 9,
+      "price": 300,
+      "name": "Tâm Lý Học Về Tiền",
+      "author": "Morgan Housel",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/83/23/b7/14a42ae4f66c9b8b298aaef4b9671442.jpg.webp",
+      "sale": 15,
+      "maxLength": 30
+    },
+    {
+      "id": 10,
+      "price": 150,
+      "name": "Combo Cẩm Nang Bé Gái Tuổi Dậy Thì - Quyển 1 Và 2 (Tái Bản 2019) (Bộ 2 Quyển)",
+      "author": "Envidi",
+      "desc": "Good",
+      "img": "https://salt.tikicdn.com/cache/280x280/ts/product/77/f2/63/d284bf77ee91d9ba8018ac985b32a09c.jpg.webp",
+      "sale": 30,
+      "maxLength": 30
+    }
+  ]
+}

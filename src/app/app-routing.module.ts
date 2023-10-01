@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductListComponent } from './components/admin/product-list/product-list.component';
-import { NavComponent } from './shared/layout-admin/nav/nav.component';
-import { DasboarComponent } from './components/admin/dasboar/dasboar.component';
-import { CreateProductComponent } from './components/admin/create-product/create-product.component';
 import { SigninComponent } from './components/auth/signin/signin.component';
 import { SignupComponent } from './components/auth/signup/signup.component';
 import { LayoutWebsiteComponent } from './shared/layout-website/layout-website.component';
 import { HomePageComponent } from './components/page/home-page/home-page.component';
 import { ProductDetailComponent } from './components/page/product-detail/product-detail.component';
+import { LayoutAdminComponent } from './shared/layout-admin/layout-admin.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { AddProductComponent } from './components/admin/add-product/add-product.component';
+import { ProductEditComponent } from './components/admin/product-edit/product-edit.component';
+import { ProductPageComponent } from './components/page/product-page/product-page.component';
 
 
 const routes: Routes = [
@@ -17,12 +18,17 @@ const routes: Routes = [
     {path: 'signin', component: SigninComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'product/:id', component: ProductDetailComponent},
+    {path: 'product', component: ProductPageComponent},
   ]},
-  {path :'admin', component:NavComponent,children:[
-    {path: '', component:DasboarComponent},
-    {path: 'products', component: ProductListComponent},
-    {path: 'addProducts', component: CreateProductComponent}
-  ]}
+  {
+    path:'admin',component : LayoutAdminComponent,children:[
+      { path:'',redirectTo: "product", pathMatch: "full"},
+      { path:'product',component : DashboardComponent},
+      { path:'product/create',component : AddProductComponent},
+      { path:'product/:id/edit',component : ProductEditComponent},
+    ]
+  }
+ 
 ];
 
 @NgModule({

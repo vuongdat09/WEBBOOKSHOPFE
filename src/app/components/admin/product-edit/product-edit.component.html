@@ -1,0 +1,40 @@
+<div class="dashboard d-flex fd">
+    <div class="header-admin">
+        Add product
+    </div>
+    <div class="product-admin">
+        <form (ngSubmit)="onHandleSubmit()" [formGroup]="productForm">
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Name</label>
+              <input formControlName="name" type="text" class="form-control"  aria-describedby="emailHelp">
+             
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Description</label>
+                <input formControlName="desc" type="text" class="form-control"  aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Price</label>
+                <input formControlName="price" type="text" class="form-control"  aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Author</label>
+                <input formControlName="author" type="text" class="form-control"  aria-describedby="emailHelp">
+               
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Sale</label>
+                <input formControlName="sale" type="text" class="form-control"  aria-describedby="emailHelp">
+               
+              </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Image</label>
+              <input formControlName="img" type="text" class="form-control" id="exampleInputPassword1">
+            </div>
+           
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+    </div>
+</div>

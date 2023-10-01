@@ -14,18 +14,24 @@ html{
     font-size: 62.5%;
 }
 body{
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
     box-sizing: border-box;
-    background-color: #f5f5fa;
+    background-color: #f5f5fa !important;
     font-family: 'Roboto', sans-serif;
 
 }
+ul{
+    padding: 0 !important;
+    margin: 0 !important;
+
+}
+
 li{
     list-style: none;
 
 }
 a{
-    text-decoration: none;
+    text-decoration: none !important;
 }
 input{
     outline: none;

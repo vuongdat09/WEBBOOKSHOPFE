@@ -24,7 +24,7 @@ export class NextButtonDirective implements OnInit {
   ngOnInit(): void {
     setInterval(() => {
       this.nextFunc(); 
-    }, 7000); 
+    }, 137000); 
   }
  
   
