@@ -4,6 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { DataUser } from 'src/app/models/user';
 import { AbstractControlOptions } from 'src/app/models/form';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup',
@@ -12,7 +13,7 @@ import { AbstractControlOptions } from 'src/app/models/form';
 })
 
 export class SignupComponent {
-  constructor(private form : FormBuilder, private authService : AuthService){}
+  constructor(private form : FormBuilder, private authService : AuthService,private router : Router){}
   
   signupForm = this.form.group({
     userName:['', [Validators.required]],
@@ -35,8 +36,11 @@ export class SignupComponent {
     try {
       await firstValueFrom(this.authService.signUp(this.signupForm.value as DataUser))
       alert('Sign up successfully')
+      this.router.navigate(['/signin'])
+
     } catch (error:any) {
-      alert(error?.error?.message)
+      console.log(error)
+      alert(error?.error)
     }
     
   }

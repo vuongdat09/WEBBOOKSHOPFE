@@ -30,10 +30,24 @@
                         <img class="iconLink" src="https://salt.tikicdn.com/ts/upload/41/28/7d/4713aa0d2855c5c770799f248692f0c5.png" alt="">
                         <span class="headerNavigationItemName">Product</span>
                     </a>
-                    <div class="headerNavigationItem d-flex al-c">
+                    <div *ngIf="user;else notUser" class="headerNavigationItem d-flex al-c">
+                        <img class="iconLink" src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png" alt="">
+                        <span class="headerNavigationItemName">{{user.userExist.userName}}</span>
+                        <ul class="user-data">
+                            <li>Profile</li>
+                            <li *ngIf="user.userExist.role === 'admin'">Admin</li>
+                            <li (click)="logOut()">Logout</li>
+                        </ul>
+                    </div>
+                    <ng-template #notUser  class="headerNavigationItem d-flex al-c">
                         <img class="iconLink" src="https://salt.tikicdn.com/ts/upload/07/d5/94/d7b6a3bd7d57d37ef6e437aa0de4821b.png" alt="">
                         <span class="headerNavigationItemName">Tài khoản</span>
-                    </div>
+                        <ul class="user-data">
+                            <li>Profile</li>
+                            <li>Admin</li>
+                            <li>Logout</li>
+                        </ul>
+                    </ng-template>
                     <div class="divider"></div>
                     <div class="card-wrapper d-flex al-c">
                         <img class="iconLink" src="https://salt.tikicdn.com/ts/upload/51/e2/92/8ca7e2cc5ede8c09e34d1beb50267f4f.png" alt="">
