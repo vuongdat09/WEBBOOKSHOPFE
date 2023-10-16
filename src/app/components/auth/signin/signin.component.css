@@ -1,0 +1,126 @@
+.contain-signup{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+    align-items: center;
+}
+.contain-form{
+    box-shadow: 0px 0px 10px rgb(204, 204, 204);
+    display: flex;
+    border-radius: 10px;
+
+}
+.form-sign{
+    width: 480px;   
+    padding: 30px 60px;
+    padding-bottom: 20px;
+    gap: 10px;
+    display: flex;    
+    flex-direction: column;
+    align-items: flex-start;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+}
+.form-group input{
+    width: 100%;
+    padding: 8px 10px;
+    border: none;
+    border-bottom: 1px solid rgb(179, 177, 177);
+    margin-top: 2px;
+    border-radius: 5px;
+}
+.form-group input:focus-within{
+    box-shadow: 0px 0px 5px #88bff9;
+}
+.image-signup{
+    width: 200px;
+    background:linear-gradient(136deg, rgb(240, 248, 255) -1%, rgb(219, 238, 255) 85%);
+}
+.image-signup img{
+    width: 100%;
+}
+.submit-form{
+    border: none;
+    padding: 5px 15px;
+    font-weight: 500;
+    border-radius: 5px;
+    background-color: rgb(255, 66, 78);;
+    color: white;
+    font-size: 16px;
+}
+.submit-form:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+label{
+    font-weight: 600;
+}
+.below-form{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    margin-top: 10px;
+}
+.divide{
+    width: 100%;
+   gap: 10px;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 10px;
+}
+.divide1{
+    width: 40%;
+    height: 1px;
+    background-color: red;
+}
+.google{
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    transform: translateX(-50%);
+    position: relative;
+    left: 50%;
+}
+.google img{
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+
+/* ------------------------------------------------- */
+.image-signup{
+    padding: 0px 30px;
+    box-sizing: content-box;
+    display: flex;
+    align-items: center;
+}
+.contain-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tiki-text{
+    color: rgb(11, 116, 229);
+    font-weight: 500;
+    margin-top: 10px;
+    font-size: 17px;
+}
+.voucher{
+    color: rgb(11, 116, 229);
+}
+.error{
+    color: red;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 15px;
+}

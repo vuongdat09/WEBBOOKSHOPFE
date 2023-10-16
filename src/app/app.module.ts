@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS  } from '@angular/common/http';
 import { FormsModule,ReactiveFormsModule  } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -28,6 +28,7 @@ import { SidebarAdminComponent } from './components/admin/sidebar-admin/sidebar-
 import { AddProductComponent } from './components/admin/add-product/add-product.component';
 import { ProductEditComponent } from './components/admin/product-edit/product-edit.component';
 import { ProductPageComponent } from './components/page/product-page/product-page.component';
+
 
 
 @NgModule({
@@ -63,7 +64,9 @@ import { ProductPageComponent } from './components/page/product-page/product-pag
     RouterLink ,
     ReactiveFormsModule 
   ],
-  providers: [],
+  providers: [
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

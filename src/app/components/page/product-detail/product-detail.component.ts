@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/models/products';
-import { ShareDataService } from 'src/app/services/share-data.service';
+import { ProductServiceService } from 'src/app/services/product-service.service';
 
 @Component({
   selector: 'app-product-detail',
@@ -10,13 +10,14 @@ import { ShareDataService } from 'src/app/services/share-data.service';
 })
 export class ProductDetailComponent {
   valueInput : number = 1
-  product!:IProduct
+  product!:any
   priceInput : number = 0
   
-  constructor(private router:ActivatedRoute,private productService :ShareDataService){
+  constructor(private router:ActivatedRoute,private ProductServiceService :ProductServiceService){
     this.router.params.subscribe(({id})=>{
-      this.productService.getProductById(+id).subscribe({
-        next:(data)=>{this.product = data,this.priceInput = data.price || 0}
+      
+      this.ProductServiceService.getProductById(id).subscribe({
+        next:(data)=>{this.product = data.product,this.priceInput = this.product.price || 0}
       })
     })
   }

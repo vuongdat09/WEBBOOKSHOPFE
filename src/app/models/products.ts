@@ -1,5 +1,6 @@
 export interface IProduct {
-    id?:string|number,
+    product?: IProduct;
+    _id?: number ,
     name?:string  | null | undefined,
     price?:number | null | undefined ,
     img ?: string  | null | undefined,
@@ -8,4 +9,10 @@ export interface IProduct {
     sale?:number | null | undefined ,
     maxLength?: string | number,
     allProduct?: any
+}
+export interface Data{
+    message: string,
+    allProduct: {
+        docs: IProduct[]
+    }
 }

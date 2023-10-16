@@ -2,7 +2,8 @@
     <div class="header-admin">
         Home
     </div>
-    <div class="product-admin">
+    <div class="product-admin" *ngIf="products">
+     
         <table class="table">
             <thead>
               <tr>
@@ -19,15 +20,16 @@
             </thead>
             <tbody>
               <tr *ngFor="let product of products, index as i">
-                <th scope="row">{{product.id}}</th>
+                <th scope="row">{{i + 1}}</th>
                 <td style="width: 160px;" class="fs-5" appEllipsis [maxLength]="20">{{product.name}}</td>
                 <td><img width="40" src={{product.img}} alt=""></td>
                 <td>{{product.price}}.000đ</td>
                 <td>{{product.author}}</td>
                 <td>{{product.desc}}</td>
                 <td>{{product.sale}}</td>
-                <td routerLink="/admin/product/{{product.id}}/edit" class="edit">Edit</td>
-                <td class="delete" (click)="handleDelete(+product.id)">Delete</td>
+                <td>{{product._id}}</td>
+                <td routerLink="/admin/product/{{product._id}}/edit" class="edit">Edit</td>
+                <td class="delete" (click)="handleDelete(product._id)">Delete</td>
               </tr>
              
             </tbody>

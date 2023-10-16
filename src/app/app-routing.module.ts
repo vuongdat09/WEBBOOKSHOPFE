@@ -13,6 +13,15 @@ import { ProductPageComponent } from './components/page/product-page/product-pag
 
 
 const routes: Routes = [
+  {
+    path :"signup",component : SignupComponent
+  },
+  {
+    path :"signin",component : SigninComponent
+  },
+  {
+    path :"signin",component : SigninComponent
+  },
   {path: '', component: LayoutWebsiteComponent,children:[
     {path: '', component: HomePageComponent},
     {path: 'signin', component: SigninComponent},
@@ -28,6 +37,7 @@ const routes: Routes = [
       { path:'product/:id/edit',component : ProductEditComponent},
     ]
   }
+ 
  
 ];
 

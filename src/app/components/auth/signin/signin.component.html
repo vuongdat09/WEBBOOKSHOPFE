@@ -1,1 +1,49 @@
-<p>signin works!</p>
+<div class="contain-signup d-flex jf-c">
+    <!-- <span *ngIf="message">error</span> -->
+    <div class="contain-form">
+     <form class="form-sign" (ngSubmit)="submitForm()" [formGroup]="signinForm">
+         <h2>Let's get sign in</h2>        
+         <div class="form-group">
+             <label for="email">Email</label>
+             <input formControlName="email" id="email" type="text" placeholder="Email...">
+             <div class="error"
+             *ngIf="
+             signinForm?.get('email')?.hasError('email') && 
+             (signinForm?.get('email')?.touched||signinForm?.get('email')?.dirty)
+             "
+             >
+                Email không đúng định dạng
+             </div>
+         </div>
+         <div class="form-group">
+             <label for="password">Password</label>
+             <input formControlName="password" id="password" type="password" placeholder="Password...">
+             <div class="error"
+             *ngIf="signinForm?.get('password')?.hasError('minlength') && (signinForm?.get('password')?.touched|| signinForm?.get('password')?.dirty)"
+             >
+                Mật khẩu tối thiểu 6 kí tự
+            </div>
+         </div>        
+         <div class="below-form">
+             <button class="submit-form" type="submit">Sign in</button>
+             <span>Don't have an account? <a routerLink="/signup">Sign up</a></span>
+         </div>
+         <div class="divide d-flex">
+             <span class="divide1"></span>
+             <span>Or with</span>
+             <span class="divide1"></span>
+         </div>
+         <div class="google">
+             <img src="https://res.cloudinary.com/dsmy4ogdj/image/upload/v1697386853/141c68302262747f5988df2aae7eb161_oubtx3.png" alt="">
+         </div>
+     </form>
+     <div class="image-signup">
+         <div class="contain-img">
+             <img src="https://res.cloudinary.com/dsmy4ogdj/image/upload/v1697386775/25b2ccba8f33a5157f161b6a50f64a60_qa9vnj.png" alt="">
+             <span class="tiki-text">Mua sắm tại Tiki</span>
+             <span class="voucher">Siêu ưu đãi mỗi ngày</span>
+         </div>
+     </div>
+    </div>
+ </div>
+ 

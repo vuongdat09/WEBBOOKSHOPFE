@@ -34,7 +34,7 @@
            <div class="contain-product">
             <!-- ---------- -->
                 <div *ngFor="let product of products,index as i" class="product d-flex fd al-c">
-                    <a routerLink="/product/{{product.id}}" class="contain-img-product">
+                    <a routerLink="/product/{{product._id}}" class="contain-img-product">
                         <img src={{product.img}} alt="">
                     </a>
                     <div class="origin">
@@ -62,7 +62,7 @@
                             {{product.price}}.000đ
                         </div>
                         <div class="discount">
-                            -36%
+                            -{{product.sale}}%
                         </div>
                     </div>
                     <div class="super-ship">

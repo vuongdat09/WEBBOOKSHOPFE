@@ -13,8 +13,6 @@ export class ShareDataService {
   setCurrentSlideIndex(index: number) {
     this.currentIndex = index;
   }
-  getProductById(id :number|string):Observable<IProduct>{
-    return this.http.get<IProduct>(`http://localhost:3000/product/${id}`)
-  }
+
   
 }

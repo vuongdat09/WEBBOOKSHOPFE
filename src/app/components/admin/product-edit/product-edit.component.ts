@@ -20,8 +20,8 @@ export class ProductEditComponent {
     img : [''],
     desc : [''],
   })
-   product: IProduct = {
-    id: 1,
+   product: any = {
+    _id: 1,
     name: 'Product Name',
     price: 29.99,
     author: 'Author Name',
@@ -36,7 +36,8 @@ export class ProductEditComponent {
       if(id){
         try {
           this.product = await firstValueFrom(this.productService.getProductById(id))
-          this.productForm.patchValue(this.product as IProduct)
+          const {product} = this.product
+          this.productForm.patchValue(product as IProduct)
 
           
         } catch (error) {
@@ -47,17 +48,19 @@ export class ProductEditComponent {
     
 
     async onHandleSubmit(){
-      if(this.productForm.invalid)return      
+      if(this.productForm.invalid)return  
+      const {product = 0} = this.product    
         const productEdit:IProduct = {
-          id : this.product.id,...this.productForm.value
+          _id : product._id,...this.productForm.value
         }
+        
         this.productService.editProduct(productEdit).subscribe({
           next: ()=>{
             alert("Update product successfully")
             this.routerNavigate.navigate(['/admin']);
           }
         })
-        console.log(productEdit)
+        
       
      
     }

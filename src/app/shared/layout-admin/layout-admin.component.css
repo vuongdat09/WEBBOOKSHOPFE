@@ -1,5 +1,8 @@
 .sidebar{
     flex: 2;
+    height:100px;
+    position: sticky;
+    top: 0;
 }
 .admin{
     flex: 10;
