@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { ErrorService } from 'src/app/services/error.service';
 import { FormBuilder, Validators } from '@angular/forms';
 import { firstValueFrom } from 'rxjs';
-import { SignInUser, User } from 'src/app/models/user';
+import { DataUser, SignInUser, User } from 'src/app/models/user';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signin',
@@ -12,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SigninComponent {
   
-  constructor(private form:FormBuilder,private authService : AuthService,private errorService:ErrorService ){
+  constructor(private form:FormBuilder,private authService : AuthService,private errorService:ErrorService ,private router:Router){
     
   }
   signinForm = this.form.group({
@@ -24,9 +25,12 @@ export class SigninComponent {
     
     if(this.signinForm.invalid)return
     try {
-      await firstValueFrom(this.authService.signIn(this.signinForm.value as SignInUser))
+      const result = await firstValueFrom(this.authService.signIn(this.signinForm.value as SignInUser))
+      const {message,...other} = result
+      localStorage.setItem('user',JSON.stringify({...other}) )
       
       alert("Sign in Successfully")
+      this.router.navigate(['/home'])
     } catch (error:any) {
       
       alert(error?.error?.message)

@@ -10,32 +10,40 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
 import { AddProductComponent } from './components/admin/add-product/add-product.component';
 import { ProductEditComponent } from './components/admin/product-edit/product-edit.component';
 import { ProductPageComponent } from './components/page/product-page/product-page.component';
+import { authGuard } from './auth.guard';
+import { roleGuardGuard } from './role-guard.guard';
 
 
 const routes: Routes = [
+  {
+    path :"",pathMatch:"full",redirectTo:'/signin'
+  },
   {
     path :"signup",component : SignupComponent
   },
   {
     path :"signin",component : SigninComponent
   },
-  {
-    path :"signin",component : SigninComponent
-  },
-  {path: '', component: LayoutWebsiteComponent,children:[
-    {path: '', component: HomePageComponent},
+ 
+  {path: "", component: LayoutWebsiteComponent,children:[
+    // {path: '',redirectTo: "signin", pathMatch: "full"},
+    {path: 'home', component: HomePageComponent},
     {path: 'signin', component: SigninComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'product/:id', component: ProductDetailComponent},
     {path: 'product', component: ProductPageComponent},
-  ]},
+  ],
+  canActivate: [authGuard],
+ 
+},
   {
     path:'admin',component : LayoutAdminComponent,children:[
       { path:'',redirectTo: "product", pathMatch: "full"},
       { path:'product',component : DashboardComponent},
       { path:'product/create',component : AddProductComponent},
       { path:'product/:id/edit',component : ProductEditComponent},
-    ]
+    ],
+    canActivate : [roleGuardGuard]
   }
  
  
